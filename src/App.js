@@ -1,16 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import React from "react";
-import {render} from "react-dom";
+import { render } from "react-dom";
+import Pet from "./Pet";
 
-
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h3", {}, props.breed),
-  ]);
-};
 const App = () => {
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <Pet name="luna" animal="dog" breed="Havanese" />
+      <Pet name="maria" animal="cat" breed="don't know" />
+      <Pet name="coco" animal="dog" breed="still don't know" />
+    </div>
+  );
+};
+
+/*const App = () => {
   return React.createElement("div", {}, [
     React.createElement("h1", {}, "Adopt Me!"),
    
@@ -30,5 +35,6 @@ const App = () => {
       breed: "still don't know",
     }),
   ]);
-};
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+};*/
+//ReactDOM.render(React.createElement(App), document.getElementById("root"));
+render(<App/>,document.getElementById("root"));
